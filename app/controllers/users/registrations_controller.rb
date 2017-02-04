@@ -9,9 +9,9 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+     super
+  end
 
   # GET /resource/edit
   # def edit

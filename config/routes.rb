@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :likes, only: [:create]
+  resources :likes, only: [:create, :destroy]
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   resources :comments
   get 'pages/info'

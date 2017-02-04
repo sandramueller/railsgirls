@@ -6,7 +6,13 @@
       <div class="col-md-4">
         <%= image_tag idea.picture_url(:thumb) if idea.picture.present?%>
         <h4><%= link_to idea.name, idea %></h4>
-        <%= idea.description %>
+        <div>
+          <%=idea.likes.length %> Likes -
+          <%=link_to 'Like', likes_path(like: {idea_id: idea.id}), method: 'post' %>
+        </div>
+        <p><%= idea.description %></p>
+        <div> <%=idea.comments.length %> Comments</div>
+      </br> </br>
       </div>
     <% end %>
   </div>
